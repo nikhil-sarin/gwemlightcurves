@@ -32,13 +32,13 @@ try:
             covar_x = self.covar_module(x)
             return gpytorch.distributions.MultivariateNormal(mean_x,                                                                    covar_x)
 except:
-    print('Install gpytorch if you want to use it...')
+#     print('Install gpytorch if you want to use it...')
 
 try:
     from gp_api.gaussian_process import GaussianProcess
     from gp_api.kernels import CompactKernel, WhiteNoiseKernel
 except:
-    print('Install gp_api if you want to use it...')
+#     print('Install gp_api if you want to use it...')
 
 #import george
 #from george import kernels
