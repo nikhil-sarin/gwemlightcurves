@@ -84,7 +84,7 @@ if sys.version < '3':
 
 setup(
     # metadata
-    name='gwemlightcurves',
+    name='kilonova_lightcurves',
     provides=['gwemlightcurves'],
     version=__version__,
     description="A python package for kilonova lightcurves",
