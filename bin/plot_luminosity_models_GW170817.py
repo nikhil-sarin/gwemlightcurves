@@ -21,11 +21,11 @@ import corner
 import pandas as pd
 
 import pymultinest
-from gwemlightcurves.sampler import *
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves.sampler import run
-from gwemlightcurves import __version__
-from gwemlightcurves import lightcurve_utils, Global
+from kilonova_lightcurves.sampler import *
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves.sampler import run
+from kilonova_lightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils, Global
 
 plotDir = '../plots/gws/Ka2017_combine'
 if not os.path.isdir(plotDir):

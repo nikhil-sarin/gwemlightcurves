@@ -2,9 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.idea/
 # C extensions
 *.so
+bin
+andrew
+spectra
+r-process_abundance
+lightcurves
+kilonova_lightcurves.egg-info
+data
 
 # Distribution / packaging
 /data/
@@ -19,7 +26,7 @@ eggs/
 lib/
 lib64/
 parts/
-/gwemlightcurves/version.py
+/kilonova_lightcurves/version.py
 sdist/
 var/
 *.egg-info/

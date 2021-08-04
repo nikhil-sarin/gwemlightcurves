@@ -19,12 +19,12 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 import matplotlib.gridspec as gridspec
 
-from gwemlightcurves import lightcurve_utils
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves.KNModels.table import CLove
-from gwemlightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves.KNModels.table import CLove
+from kilonova_lightcurves import __version__
 
-from gwemlightcurves.EjectaFits.CoDi2019 import calc_meje, calc_vej
+from kilonova_lightcurves.EjectaFits.CoDi2019 import calc_meje, calc_vej
 
 np.random.seed(0)
 

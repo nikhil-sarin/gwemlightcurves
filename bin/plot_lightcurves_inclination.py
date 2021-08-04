@@ -32,7 +32,7 @@ import scipy.stats as ss
 
 import os
 
-from gwemlightcurves.KNModels import KNTable
+from kilonova_lightcurves.KNModels import KNTable
 
 def parse_commandline():
     """

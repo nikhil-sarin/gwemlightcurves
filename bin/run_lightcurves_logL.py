@@ -14,10 +14,10 @@ plt.rcParams['xtick.labelsize']=30
 plt.rcParams['ytick.labelsize']=30
 from matplotlib.pyplot import cm
 
-from gwemlightcurves.sampler import *
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves import __version__
-from gwemlightcurves import lightcurve_utils, Global
+from kilonova_lightcurves.sampler import *
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils, Global
 
 def parse_commandline():
     """

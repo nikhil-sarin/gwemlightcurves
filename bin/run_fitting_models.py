@@ -22,18 +22,18 @@ import plotutils.plotutils as pu
 
 import pymultinest
 
-from gwemlightcurves.sampler import *
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves.sampler import run
-from gwemlightcurves import __version__
-from gwemlightcurves import lightcurve_utils, Global
-from gwemlightcurves.KNModels.table import tidal_lambda_from_tilde
+from kilonova_lightcurves.sampler import *
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves.sampler import run
+from kilonova_lightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils, Global
+from kilonova_lightcurves.KNModels.table import tidal_lambda_from_tilde
 
-from gwemlightcurves.EjectaFits import KaKy2016
-from gwemlightcurves.EjectaFits import DiUj2017 
-from gwemlightcurves.EjectaFits import Di2018b
-from gwemlightcurves.EjectaFits import CoDi2019
-from gwemlightcurves.EjectaFits import KrFo2019
+from kilonova_lightcurves.EjectaFits import KaKy2016
+from kilonova_lightcurves.EjectaFits import DiUj2017
+from kilonova_lightcurves.EjectaFits import Di2018b
+from kilonova_lightcurves.EjectaFits import CoDi2019
+from kilonova_lightcurves.EjectaFits import KrFo2019
 
 def parse_commandline():
     """

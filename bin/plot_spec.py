@@ -14,7 +14,7 @@ from matplotlib.pyplot import cm
 
 from scipy.optimize import curve_fit
 
-from gwemlightcurves import lightcurve_utils
+from kilonova_lightcurves import lightcurve_utils
 
 def parse_commandline():
     """

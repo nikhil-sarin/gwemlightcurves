@@ -104,7 +104,7 @@ for line in lines:
             job_number = job_number + 1
 
 fid = open(os.path.join(condorDir,'condor.sub'),'w')
-fid.write('executable = /home/mcoughlin/gwemlightcurves/bin/run_lightcurves_models.py\n')
+fid.write('executable = /home/mcoughlin/kilonova_lightcurves/bin/run_lightcurves_models.py\n')
 fid.write('output = logs/out.$(jobNumber)\n');
 fid.write('error = logs/err.$(jobNumber)\n');
 #fid.write('arguments = --doEvent --model $(model) --name $(grb) --tmin $(tmin) --tmax $(tmax) --distance $(distance) --T0 $(T0) --filters $(filters) --errorbudget $(errorbudget) --doFixZPT0 --doEjecta\n')

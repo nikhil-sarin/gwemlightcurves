@@ -24,7 +24,7 @@ import scipy.stats as ss
 
 import pymultinest
 
-from gwemlightcurves import lightcurve_utils, Global
+from kilonova_lightcurves import lightcurve_utils, Global
 
 def parse_commandline():
     """

@@ -27,12 +27,12 @@ sns.set(style="ticks", color_codes=True)
 import pandas as pd
 
 import pymultinest
-from gwemlightcurves.sampler import *
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves.sampler import run
-from gwemlightcurves import __version__
-from gwemlightcurves import lightcurve_utils, Global
-from gwemlightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
+from kilonova_lightcurves.sampler import *
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves.sampler import run
+from kilonova_lightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils, Global
+from kilonova_lightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
 
 from pycbc.io.inference_hdf import InferenceFile
 from pycbc import conversions

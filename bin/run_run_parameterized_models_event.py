@@ -11,7 +11,7 @@ from matplotlib.pyplot import cm
 plt.rcParams['xtick.labelsize']=30
 plt.rcParams['ytick.labelsize']=30
 
-from gwemlightcurves import lightcurve_utils, Global
+from kilonova_lightcurves import lightcurve_utils, Global
 
 distance_sets = [[1,300],[300,1000],[1000,10000],[10000,100000]]
 filts = ["u","g","r","i","z","y","J","H","K"]

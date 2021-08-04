@@ -46,12 +46,12 @@ import math
 
 ### non-standard libraries
 from twixie import kde
-from gwemlightcurves import lightcurve_utils
+from kilonova_lightcurves import lightcurve_utils
 from mass_grid import run_EOS
 #-------------------------------------------------
 
 #-------------------------------------------------
-#data = np.loadtxt('/home/michael.coughlin/gwemlightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/GW190425/-9.00/0.10/2-post_equal_weights.dat', usecols = 1)
+#data = np.loadtxt('/home/michael.coughlin/kilonova_lightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/GW190425/-9.00/0.10/2-post_equal_weights.dat', usecols = 1)
 #print(data_test)
 
 
@@ -373,8 +373,8 @@ def run_prob(mass, lan, chi, coverage_factors = False, theor = False, Type = Non
         if coverage_factors == True:
             cov = np.array([0.2390, 0.5157, 0.7837, 0.4939, 0.3117, 0.2892, 0.1922, 0.4342, 0.0485, 0.009, 0.4796, 0.1817, 0.7608]) 
         for e, event in enumerate(event_name_list):
-            filename = '/home/michael.coughlin/gwemlightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+str(lan)+'/0.10/2-post_equal_weights.dat'
-            #dir = '/home/michael.coughlin/gwemlightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+lan+'/0.10/'
+            filename = '/home/michael.coughlin/kilonova_lightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+str(lan)+'/0.10/2-post_equal_weights.dat'
+            #dir = '/home/michael.coughlin/kilonova_lightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+lan+'/0.10/'
             prob_list = []
             prob_norm_list = []
             if not os.path.exists(filename):
@@ -508,7 +508,7 @@ def plot(mass, prob_events, prob_norm_events, lan, chi, coverage_factors=False):
     
     plotname = '/home/andrew.toivonen/public_html/KDE_comp_analytical.pdf'
     plt.savefig(plotname)
-    plotname = '/home/andrew.toivonen/gwemlightcurves/andrew/output/KDE_comp_analytical.pdf'
+    plotname = '/home/andrew.toivonen/kilonova_lightcurves/andrew/output/KDE_comp_analytical.pdf'
     plt.savefig(plotname)
     plt.close(fig)
 

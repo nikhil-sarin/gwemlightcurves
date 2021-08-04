@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# gwemlightcurves documentation build configuration file, created by
+# kilonova_lightcurves documentation build configuration file, created by
 # sphinx-quickstart on Thu Apr 21 14:05:08 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -15,7 +15,7 @@
 import sys
 import os
 
-from gwemlightcurves import __version__ as gwemlightcurves_version
+from kilonova_lightcurves import __version__ as gwemlightcurves_version
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -56,7 +56,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'gwemlightcurves'
+project = u'kilonova_lightcurves'
 copyright = u'2017, Scott Coughlin'
 author = u'Scott Coughlin'
 
@@ -131,7 +131,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
-# html_title = u'gwemlightcurves v0.1'
+# html_title = u'kilonova_lightcurves v0.1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # html_short_title = None
@@ -235,7 +235,7 @@ latex_elements = {
 # (source start file, target name, title,
 # author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'gwemlightcurves.tex', u'gwemlightcurves Documentation',
+    (master_doc, 'kilonova_lightcurves.tex', u'kilonova_lightcurves Documentation',
      u'Scott Coughlin', 'manual'),
 ]
 
@@ -265,7 +265,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'gwemlightcurves', u'gwemlightcurves Documentation',
+    (master_doc, 'kilonova_lightcurves', u'kilonova_lightcurves Documentation',
      [author], 1)
 ]
 
@@ -279,8 +279,8 @@ man_pages = [
 # (source start file, target name, title, author,
 # dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'gwemlightcurves', u'gwemlightcurves Documentation',
-     author, 'gwemlightcurves', 'One line description of project.',
+    (master_doc, 'kilonova_lightcurves', u'kilonova_lightcurves Documentation',
+     author, 'kilonova_lightcurves', 'One line description of project.',
      'Miscellaneous'),
 ]
 

@@ -21,11 +21,11 @@ import pandas as pd
 
 ### non-standard libraries
 
-from gwemlightcurves.KNModels import KNTable
-#from gwemlightcurves import __version__
-#from gwemlightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
+from kilonova_lightcurves.KNModels import KNTable
+#from kilonova_lightcurves import __version__
+#from kilonova_lightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
 #from twixie import kde
-#from gwemlightcurves import lightcurve_utils
+#from kilonova_lightcurves import lightcurve_utils
 #from mass_grid import run_EOS
 #
 
@@ -78,7 +78,7 @@ samples['slope_r'] = slope_r
 samples['theta_r'] = theta_r
 samples['Ye'] = Ye
 
-ModelPath = "/home/cosmin.stachie/gwemlightcurves/output/svdmodels"
+ModelPath = "/home/cosmin.stachie/kilonova_lightcurves/output/svdmodels"
 kwargs = {'SaveModel':False,'LoadModel':True,'ModelPath':ModelPath}
 kwargs["doAB"] = True
 kwargs["doSpec"] = False

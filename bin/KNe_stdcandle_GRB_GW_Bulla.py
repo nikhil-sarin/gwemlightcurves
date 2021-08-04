@@ -34,7 +34,7 @@ import scipy.stats as ss
 import pymultinest
 import os
 
-from gwemlightcurves.KNModels import KNTable
+from kilonova_lightcurves.KNModels import KNTable
 
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF, Matern, DotProduct, ConstantKernel, RationalQuadratic

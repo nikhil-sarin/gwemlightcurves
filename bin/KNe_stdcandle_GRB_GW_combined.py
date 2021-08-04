@@ -36,7 +36,7 @@ import os
 
 from astropy.cosmology import LambdaCDM
 
-from gwemlightcurves.KNModels import KNTable
+from kilonova_lightcurves.KNModels import KNTable
 
 def parse_commandline():
     """

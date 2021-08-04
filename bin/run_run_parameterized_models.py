@@ -12,7 +12,7 @@ matplotlib.rcParams.update({'font.size': 16})
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 
-from gwemlightcurves import lightcurve_utils
+from kilonova_lightcurves import lightcurve_utils
 
 mej1 = 5e-3
 vej1  = 0.45

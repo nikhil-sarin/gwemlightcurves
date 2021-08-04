@@ -34,8 +34,8 @@ import scipy.stats as ss
 import pymultinest
 import os
 
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves import lightcurve_utils
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves import lightcurve_utils
 
 from astropy.cosmology import LambdaCDM
 

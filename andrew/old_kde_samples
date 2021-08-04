@@ -45,12 +45,12 @@ import math
 
 ### non-standard libraries
 from twixie import kde
-from gwemlightcurves import lightcurve_utils
+from kilonova_lightcurves import lightcurve_utils
 from mass_grid import Test
 #-------------------------------------------------
 
 #-------------------------------------------------
-#data = np.loadtxt('/home/michael.coughlin/gwemlightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/GW190425/-9.00/0.10/2-post_equal_weights.dat', usecols = 1)
+#data = np.loadtxt('/home/michael.coughlin/kilonova_lightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/GW190425/-9.00/0.10/2-post_equal_weights.dat', usecols = 1)
 #print(data_test)
 
  
@@ -220,7 +220,7 @@ def run_theoretical(Type, lan, chi, EOS):
                     #xlims = [-2.8,-1.0]
                     xlims = [-3, -1.5]
                     #ylims = [1e-1,2]
-                    plotName = "/home/andrew.toivonen/gwemlightcurves/KDE_plots/mej_"+str(Type)+"_m1_"+str(np.round(m1m, decimals=1))+"_m2_"+str(np.round(m2m, decimals=1))+'_chi_'+str(chi)+".pdf"
+                    plotName = "/home/andrew.toivonen/kilonova_lightcurves/KDE_plots/mej_"+str(Type)+"_m1_"+str(np.round(m1m, decimals=1))+"_m2_"+str(np.round(m2m, decimals=1))+'_chi_'+str(chi)+".pdf"
                     plt.figure(figsize=(15,10))
                     ax = plt.gca()
                     bins, hist1 = lightcurve_utils.hist_results(np.log10(samples_gp["mej"]),Nbins=20)
@@ -263,7 +263,7 @@ def run_theoretical(Type, lan, chi, EOS):
                 if check == 1:
                     m1_0.append(m1_plot[num])
                     m2_0.append(m2_plot[num])               
-        plotName = "/home/andrew.toivonen/gwemlightcurves/KDE_plots/mej_mass_grid_"+str(Type)+'_chi_'+str(chi)+"_zoomout.pdf"
+        plotName = "/home/andrew.toivonen/kilonova_lightcurves/KDE_plots/mej_mass_grid_"+str(Type)+'_chi_'+str(chi)+"_zoomout.pdf"
         fig2 = plt.figure(figsize=(15,10))
         ax2 = plt.gca()
         if Type == 'BNS' or 'BNS_equal' or 'BNS_chirp_q':
@@ -313,8 +313,8 @@ def run_prob(mass, combined_kde, lan, chi, coverage_factors = False, theor = Fal
         if coverage_factors == True:
             cov = np.array([0.2390, 0.5157, 0.7837, 0.4939, 0.3117, 0.2892, 0.1922, 0.4342, 0.0485, 0.009, 0.4796, 0.1817, 0.7608]) 
         for e, event in enumerate(event_name_list):
-            filename = '/home/michael.coughlin/gwemlightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+str(lan)+'/0.10/2-post_equal_weights.dat'
-            #dir = '/home/michael.coughlin/gwemlightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+lan+'/0.10/'
+            filename = '/home/michael.coughlin/kilonova_lightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+str(lan)+'/0.10/2-post_equal_weights.dat'
+            #dir = '/home/michael.coughlin/kilonova_lightcurves/plots/limits/Ka2017_FixZPT0/g_r/0_3/ejecta/'+event+'/'+lan+'/0.10/'
             prob_list = []
             prob_norm_list = []
             if not os.path.exists(filename):
@@ -417,7 +417,7 @@ def run_prob(mass, combined_kde, lan, chi, coverage_factors = False, theor = Fal
                 #ax = plt.gca()
                 mej_probs = prob_kde
 
-                plotName = "/home/andrew.toivonen/gwemlightcurves/KDE_plots/test_"+str(Type)+'_'+str(event)+"_"+str(lan)+".pdf"
+                plotName = "/home/andrew.toivonen/kilonova_lightcurves/KDE_plots/test_"+str(Type)+'_'+str(event)+"_"+str(lan)+".pdf"
                 #bins = np.linspace(np.min(data_out),np.max(data_out),30)
                 bins = np.linspace(np.min(mass),np.max(mass),50)
                 hist1, bins1 = np.histogram(data_out,bins=bins)
@@ -568,12 +568,12 @@ def plot(mass, prob_events, prob_norm_events, lan, chi, coverage_factors=False, 
     plt.legend()
     plt.grid()
 
-    plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_'+EOS_type+'.pdf'
+    plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_'+EOS_type+'.pdf'
     if coverage_factors == True:
-        plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_'+EOS_type+'_coverage_factors.pdf'
+        plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_'+EOS_type+'_coverage_factors.pdf'
 
     if theoretical:
-        plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_'+EOS_type+'_theory.pdf'
+        plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_'+EOS_type+'_theory.pdf'
     plt.savefig(plotname)
     plt.close(fig)
 
@@ -598,12 +598,12 @@ def plot(mass, prob_events, prob_norm_events, lan, chi, coverage_factors=False, 
     plt.legend()
     plt.grid()
 
-    plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_O3events_comp_lan_'+str(lan)+'_chi_'+str(chi)+'.pdf'
+    plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_O3events_comp_lan_'+str(lan)+'_chi_'+str(chi)+'.pdf'
     if coverage_factors == True:
-        plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_O3events_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_coverage_factors.pdf'
+        plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_O3events_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_coverage_factors.pdf'
 
     if theoretical:
-        plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_O3events_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_theory.pdf'
+        plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_O3events_comp_lan_'+str(lan)+'_chi_'+str(chi)+'_theory.pdf'
     plt.savefig(plotname)
     plt.close(fig)
 
@@ -633,12 +633,12 @@ def plot(mass, prob_events, prob_norm_events, lan, chi, coverage_factors=False, 
     plt.legend()
     plt.grid()
 
-    plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_lan_'+str(lan)+'_chi_'+str(chi)+'.pdf'
+    plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_lan_'+str(lan)+'_chi_'+str(chi)+'.pdf'
     if coverage_factors == True:
-        plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_lan_'+str(lan)+'_chi_'+str(chi)+'_coverage_factors.pdf'
+        plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_lan_'+str(lan)+'_chi_'+str(chi)+'_coverage_factors.pdf'
 
     if theoretical:
-        plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_lan_'+str(lan)+'_chi_'+str(chi)+'_theory.pdf'
+        plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_lan_'+str(lan)+'_chi_'+str(chi)+'_theory.pdf'
     plt.savefig(plotname)
     plt.close(fig)
     data_bns = ones-theory_bns
@@ -695,7 +695,7 @@ plt.ylabel('Cumulative Probability')
 plt.legend()
 plt.grid()
 
-plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_comparison_theory_'+EOS_type+'.pdf'
+plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_comparison_theory_'+EOS_type+'.pdf'
 plt.savefig(plotname)
 plt.close(fig)
 
@@ -725,6 +725,6 @@ plt.ylabel('Cumulative Probability')
 plt.legend()
 plt.grid()
 
-plotname = '/home/andrew.toivonen/gwemlightcurves/mej_plots/KDE_zerodetection_semilog_comparison_theory_'+EOS_type+'.pdf'
+plotname = '/home/andrew.toivonen/kilonova_lightcurves/mej_plots/KDE_zerodetection_semilog_comparison_theory_'+EOS_type+'.pdf'
 plt.savefig(plotname)
 plt.close(fig) 

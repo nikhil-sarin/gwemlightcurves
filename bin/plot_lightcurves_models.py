@@ -22,7 +22,7 @@ plt.rcParams['text.usetex'] = True
 from chainconsumer import ChainConsumer
 import corner
 
-from gwemlightcurves import lightcurve_utils, ztf_utils, Global
+from kilonova_lightcurves import lightcurve_utils, ztf_utils, Global
 
 def parse_commandline():
     """

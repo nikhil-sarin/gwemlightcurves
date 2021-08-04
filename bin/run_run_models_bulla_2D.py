@@ -30,7 +30,7 @@ costhetas = np.linspace(0,1,ntheta)
 thetas = np.rad2deg(np.arccos(costhetas))
 
 filts = ["u","g","r","i","z","y","J","H","K"]
-onedfilename = "/home/michael.coughlin/gwemlightcurves/output/kasen_kilonova_grid/knova_d1_n10_m0.040_vk0.10_fd1.0_Xlan1e-2.0.dat"
+onedfilename = "/home/michael.coughlin/kilonova_lightcurves/output/kasen_kilonova_grid/knova_d1_n10_m0.040_vk0.10_fd1.0_Xlan1e-2.0.dat"
 oned = np.loadtxt(onedfilename)
 
 for model in models:

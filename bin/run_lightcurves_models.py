@@ -21,11 +21,11 @@ plt.rcParams['text.usetex'] = True
 import corner
 
 import pymultinest
-from gwemlightcurves.sampler import *
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves.sampler import run
-from gwemlightcurves import __version__
-from gwemlightcurves import svd_utils, lightcurve_utils, ztf_utils, Global
+from kilonova_lightcurves.sampler import *
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves.sampler import run
+from kilonova_lightcurves import __version__
+from kilonova_lightcurves import svd_utils, lightcurve_utils, ztf_utils, Global
 
 def parse_commandline():
     """
@@ -236,12 +236,12 @@ if opts.doModels or opts.doGoingTheDistance or opts.doMassGap or opts.doFixedLim
         ph = 3.14
 
         if m1 > 3:
-            from gwemlightcurves.EjectaFits.KaKy2016 import calc_meje, calc_vave
+            from kilonova_lightcurves.EjectaFits.KaKy2016 import calc_meje, calc_vave
             mej = calc_meje(q,chi_eff,c2,mb2,m2)
             vej = calc_vave(q)
 
         else:
-            from gwemlightcurves.EjectaFits.DiUj2017 import calc_meje, calc_vej
+            from kilonova_lightcurves.EjectaFits.DiUj2017 import calc_meje, calc_vej
             mej = calc_meje(m1,mb1,c1,m2,mb2,c2)
             vej = calc_vej(m1,c1,m2,c2)
 

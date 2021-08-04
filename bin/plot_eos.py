@@ -17,10 +17,10 @@ from matplotlib.pyplot import cm
 from astropy.table import (Table, Column, vstack)
 from distutils.spawn import find_executable
 
-from gwemlightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
+from kilonova_lightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
 
-import gwemlightcurves.EOS.TOV.Monica.MonotonicSpline as ms
-import gwemlightcurves.EOS.TOV.Monica.eos_tools as et
+import kilonova_lightcurves.EOS.TOV.Monica.MonotonicSpline as ms
+import kilonova_lightcurves.EOS.TOV.Monica.eos_tools as et
     
 def get_eps(EOS,mass):                   
     MassRadiusBaryMassTable = Table.read(find_executable(EOS + '_mr.dat'), format='ascii')

@@ -25,12 +25,12 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 import matplotlib.gridspec as gridspec
 
-from gwemlightcurves import lightcurve_utils
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves.KNModels.table import marginalize_eos_spec
-from gwemlightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves.KNModels.table import marginalize_eos_spec
+from kilonova_lightcurves import __version__
 
-from gwemlightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
+from kilonova_lightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
 
 
 def parse_commandline():
@@ -498,7 +498,7 @@ if (opts.analysisType == "posterior") or (opts.analysisType == "mchirp"):
 
         mej, vej = np.zeros(samples['m1'].shape), np.zeros(samples['m1'].shape)
 
-        from gwemlightcurves.EjectaFits.PaDi2019 import calc_meje, calc_vej
+        from kilonova_lightcurves.EjectaFits.PaDi2019 import calc_meje, calc_vej
         # calc the mass of ejecta
         mej1 = calc_meje(samples['m1'], samples['c1'], samples['m2'], samples['c2'])
         # calc the velocity of ejecta
@@ -508,7 +508,7 @@ if (opts.analysisType == "posterior") or (opts.analysisType == "mchirp"):
 
         samples['q'] = 1.0 / samples['q']
 
-        from gwemlightcurves.EjectaFits.KrFo2019 import calc_meje, calc_vave
+        from kilonova_lightcurves.EjectaFits.KrFo2019 import calc_meje, calc_vave
         # calc the mass of ejecta
        
         
@@ -620,14 +620,14 @@ elif opts.analysisType == "cbclist":
 
     if (not 'mej' in samples.colnames) and (not 'vej' in samples.colnames):
         if opts.cbc_type == "BNS":
-            from gwemlightcurves.EjectaFits.CoDi2019 import calc_meje, calc_vej
+            from kilonova_lightcurves.EjectaFits.CoDi2019 import calc_meje, calc_vej
             # calc the mass of ejecta
             samples['mej'] = calc_meje(samples['m1'],samples['c1'], samples['m2'], samples['mc2'])
             # calc the velocity of ejecta
             samples['vej'] = calc_vej(samples['m1'],samples['c1'],samples['m2'],samples['c2'])
         elif opts.cbc_type == "BHNS":
             samples['chi_eff'] = 1.0
-            from gwemlightcurves.EjectaFits.KaKy2016 import calc_meje, calc_vave
+            from kilonova_lightcurves.EjectaFits.KaKy2016 import calc_meje, calc_vave
             # calc the mass of ejecta
             samples['mej'] = calc_meje(samples['q'],samples['chi_eff'],samples['c1'], samples['mb1'], samples['m1'])
             # calc the velocity of ejecta

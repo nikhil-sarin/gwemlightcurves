@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 import corner
 
-from gwemlightcurves import lightcurve_utils
+from kilonova_lightcurves import lightcurve_utils
 
 def parse_commandline():
     """

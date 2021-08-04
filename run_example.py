@@ -1,5 +1,5 @@
 import numpy as np
-from gwemlightcurves.em_counterpart import EM_Counterpart
+from kilonova_lightcurves.em_counterpart import EM_Counterpart
 
 
 output_path = "/home/cosmin.stachie/public_html/popular" #the place where you want to save the data

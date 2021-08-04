@@ -18,9 +18,9 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 from scipy.optimize import curve_fit
 
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves import __version__
-from gwemlightcurves import lightcurve_utils, Global
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils, Global
 
 def parse_commandline():
     """

@@ -1,5 +1,5 @@
 import unittest
-from gwemlightcurves.sampler import model
+from kilonova_lightcurves.sampler import model
 
 
 class TestModel(unittest.TestCase):

@@ -20,11 +20,11 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 import matplotlib.gridspec as gridspec
 
-from gwemlightcurves import lightcurve_utils
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves import __version__
 
-from gwemlightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
+from kilonova_lightcurves.EOS.EOS4ParameterPiecewisePolytrope import EOS4ParameterPiecewisePolytrope
 
 def parse_commandline():
     """
@@ -397,7 +397,7 @@ def run_EOS(EOS, m1, m2, chi, type_set=Type, model_set = 'Bu2019inc', twixie = t
             mej, vej = np.zeros(samples['m1'].shape), np.zeros(samples['m1'].shape)
             wind_mej, dyn_mej = np.zeros(samples['m1'].shape), np.zeros(samples['m1'].shape)   
  
-            from gwemlightcurves.EjectaFits.CoDi2019 import calc_meje, calc_vej
+            from kilonova_lightcurves.EjectaFits.CoDi2019 import calc_meje, calc_vej
             # calc the mass of ejecta
             mej1, dyn_mej1, wind_mej1 = calc_meje(samples['m1'], samples['c1'], samples['m2'], samples['c2'], split_mej=True)
             # calc the velocity of ejecta
@@ -407,7 +407,7 @@ def run_EOS(EOS, m1, m2, chi, type_set=Type, model_set = 'Bu2019inc', twixie = t
     
             #samples['q'] = 1.0 / samples['q']
     
-            from gwemlightcurves.EjectaFits.KrFo2019 import calc_meje, calc_vave
+            from kilonova_lightcurves.EjectaFits.KrFo2019 import calc_meje, calc_vave
             # calc the mass of ejecta
            
             
@@ -511,9 +511,9 @@ if __name__ == "__main__":
                     bounds = [-3.0,-1.0]
                     xlims = [-2.8,-1.0]
                     ylims = [1e-1,2]
-                    plotName = "/home/andrew.toivonen/gwemlightcurves/mass_plots/mej_"+str(opts.analysisType)+"_m1_"+str(np.round(m1m, decimals=1))+"_m2_"+str(np.round(m2m, decimals=1))+'_chi_'+str(chi)+".pdf"
+                    plotName = "/home/andrew.toivonen/kilonova_lightcurves/mass_plots/mej_"+str(opts.analysisType)+"_m1_"+str(np.round(m1m, decimals=1))+"_m2_"+str(np.round(m2m, decimals=1))+'_chi_'+str(chi)+".pdf"
                     if twixie_tf:
-                        plotName = "/home/andrew.toivonen/gwemlightcurves/mass_plots/mej_"+str(opts.analysisType)+"_m1_"+str(np.round(m1m, decimals=1))+"_m2_"+str(np.round(m2m, decimals=1))+"twixie.pdf"
+                        plotName = "/home/andrew.toivonen/kilonova_lightcurves/mass_plots/mej_"+str(opts.analysisType)+"_m1_"+str(np.round(m1m, decimals=1))+"_m2_"+str(np.round(m2m, decimals=1))+"twixie.pdf"
                     plt.figure(figsize=(15,10))
                     ax = plt.gca()
                     for ii,model in enumerate(models):
@@ -563,9 +563,9 @@ if __name__ == "__main__":
                 if check == 1:
                     m1_0.append(m1_plot[num])
                     m2_0.append(m2_plot[num])               
-        plotName = "/home/andrew.toivonen/gwemlightcurves/mass_plots/new/mej_mass_grid_"+str(opts.analysisType)+'_chi_'+str(chi)+".pdf"
+        plotName = "/home/andrew.toivonen/kilonova_lightcurves/mass_plots/new/mej_mass_grid_"+str(opts.analysisType)+'_chi_'+str(chi)+".pdf"
         if twixie_tf:
-            plotName = "/home/andrew.toivonen/gwemlightcurves/mass_plots/new/mej_mass_grid_"+str(opts.analysisType)+"_twixie.pdf"
+            plotName = "/home/andrew.toivonen/kilonova_lightcurves/mass_plots/new/mej_mass_grid_"+str(opts.analysisType)+"_twixie.pdf"
         fig2 = plt.figure(figsize=(15,10))
         ax2 = plt.gca()
         if opts.analysisType == 'BNS':
@@ -597,9 +597,9 @@ if __name__ == "__main__":
     
     
     
-        plotName = "/home/andrew.toivonen/gwemlightcurves/mass_plots/new/mej_mass_grid_lambdatilde_"+str(opts.analysisType)+'_chi_'+str(chi)+".pdf"
+        plotName = "/home/andrew.toivonen/kilonova_lightcurves/mass_plots/new/mej_mass_grid_lambdatilde_"+str(opts.analysisType)+'_chi_'+str(chi)+".pdf"
         if twixie_tf:
-            plotName = "/home/andrew.toivonen/gwemlightcurves/mass_plots/new/mej_mass_grid_lambdatilde_"+str(opts.analysisType)+"_twixie.pdf"
+            plotName = "/home/andrew.toivonen/kilonova_lightcurves/mass_plots/new/mej_mass_grid_lambdatilde_"+str(opts.analysisType)+"_twixie.pdf"
         fig2 = plt.figure(figsize=(15,10))
         ax2 = plt.gca()
         if opts.analysisType == 'BNS':

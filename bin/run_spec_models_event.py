@@ -20,9 +20,9 @@ matplotlib.rcParams.update({'font.size': 16})
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 
-from gwemlightcurves import lightcurve_utils
-from gwemlightcurves.KNModels import KNTable
-from gwemlightcurves import __version__
+from kilonova_lightcurves import lightcurve_utils
+from kilonova_lightcurves.KNModels import KNTable
+from kilonova_lightcurves import __version__
 
 def parse_commandline():
     """
@@ -182,7 +182,7 @@ if opts.analysisType == "posterior":
     samples = samples.calc_baryonic_mass(EOS=None, TOV=None, fit=True)
 
     if (not 'mej' in samples.colnames) and (not 'vej' in samples.colnames):
-        from gwemlightcurves.EjectaFits.DiUj2017 import calc_meje, calc_vej
+        from kilonova_lightcurves.EjectaFits.DiUj2017 import calc_meje, calc_vej
         # calc the mass of ejecta
         samples['mej'] = calc_meje(samples['m1'], samples['mb1'], samples['c1'], samples['m2'], samples['mb2'], samples['c2'])
         # calc the velocity of ejecta
